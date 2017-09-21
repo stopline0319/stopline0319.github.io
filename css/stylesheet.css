@@ -54,14 +54,12 @@ footer {
 @media all and (max-width:999px) {}
 
 
-}
-
 /*데스크탑*/
+
 @media all and (min-width:1000px) {
   .wrapper {
     align-items: center;
   }
-  
   .header,
   .navigation,
   .main-content,
