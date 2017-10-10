@@ -1,9 +1,9 @@
 @charset "utf-8";
-@import url("https//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
 @import url("./reset.css");
 
-/*숨긴 콘텐츠*/
+/* 숨김 콘텐츠 */
 
 .hidden {
   position: absolute;
@@ -11,7 +11,7 @@
 }
 
 
-/*하이퍼링크 스타일*/
+/* 하이퍼링크 스타일 */
 
 a:link,
 a:visited {
@@ -21,11 +21,11 @@ a:visited {
 
 a:hover,
 a:focus {
-  color: #f00
+  color: #f00;
 }
 
 
-/*본문 스타일*/
+/* 본문 스타일 */
 
 body {
   font-family: 'Spoqa Han Sans';
@@ -33,10 +33,9 @@ body {
 }
 
 
-/*레이아웃*/
+/* 레이아웃 */
 
 .wrapper {
-  background: silver;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -46,12 +45,8 @@ body {
 .navigation,
 .main-content,
 .slogan,
-footer {
+.footer {
   width: 100%;
-}
-
-.navigation {
-  background: pink;
 }
 
 .main-content {
@@ -67,14 +62,14 @@ footer {
 }
 
 
-/*모바일*/
+/* 모바일 */
 
 @media all and (max-width:999px) {
   .header {
     background: #38302e;
     display: flex;
     flex-direction: column;
-    color: #fff
+    color: #fff;
   }
   .member {
     order: -1;
@@ -85,7 +80,7 @@ footer {
   .member a {
     display: block;
     padding: 0.5rem 1rem;
-    margin-left: 0.5rem;
+    margin-left: 0.5rem
   }
   .logo {
     padding: 1rem;
@@ -112,17 +107,75 @@ footer {
 }
 
 
-/*데스크탑*/
+/* 데스크탑 */
 
 @media all and (min-width:1000px) {
   .wrapper {
     align-items: center;
   }
   .header,
-  .navigation,
+  .main-menu,
   .main-content,
   .slogan,
   .footer {
     width: 80%;
+  }
+  .header {
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  .logo {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .member {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .member a {
+    display: block;
+    padding: 1rem 0.5rem;
+    margin-left: 0.5rem;
+  }
+  .search-wrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .search input {
+    width: 400px;
+    height: 35px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 0 0 0 1rem;
+    margin-right: 1rem;
+  }
+  .btn-search {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: #988574;
+    color: #fff;
+    padding: 0 1rem;
+  }
+  .navigation {
+    background: #988574;
+    border-top: 2px solid #222;
+    border-bottom: 2px solid #222;
+    padding: 1rem 0;
+  }
+  .main-menu {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+  }
+  .main-menu span {
+    font-size: 1rem;
+    font-weight: 700;
+    text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000;
+  }
+  .sub-menu li {
+    margin: 0.5rem 0 0.5rem 0.5rem;
   }
 }
